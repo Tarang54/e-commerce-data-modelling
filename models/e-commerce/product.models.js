@@ -19,7 +19,12 @@ const productSchema = new mongoose.Schema({
     },
     cateogary : {
         type : mongoose.Schema.Types.ObjectId,
-        ref : "Cateogary"
+        ref : "Cateogary",
+        required : true
+    },
+    owner : {
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "User"
     }
 } , {timestamps : true})
 
